@@ -84,4 +84,66 @@ var timeList = setInterval(function(){
 	}else{
 		showTime()
 	}
-},1000)
+},1000);
+//option  选项卡效果
+
+$(".option-Top ul li").mouseenter(function(){
+	var $list = $(this).attr("list")
+	$(this).css({
+		"background":"#fff url(img/option-Top.jpg) repeat-x",
+        "color":"#ff5722"
+	}).siblings().css({
+		"background":"#fafafa",
+		"color":"#000"
+	})
+	$.ajax({
+		type:"get",
+		url:"./js/option.json",
+		dataType:"json",
+		success : function( json ){
+			var pro = json[$list].list;
+			if( $list == "classify006"){
+				$(".option-Bt").html(`
+										<dl>
+											<dt><a href=""><img src="img/${pro[0].src}"/></a></dt>
+											<dd><a href="">${pro[0].content}</a></dd>
+											<dd><span>${pro[0].price}</span><em>${pro[0].price1}</em></dd>
+										</dl>	
+									`)
+				$(".option-Bt").css({"display":"block"})
+			}else{
+				$(".option-Bt").css("display","flex")
+				$(".option-Bt").html(`
+					<dl>
+						<dt><a href=""><img src="img/${pro[0].src}"/></a></dt>
+						<dd><a href="">${pro[0].content}</a></dd>
+						<dd><span>${pro[0].price}</span><em>${pro[0].price1}</em></dd>
+					</dl>
+					<dl>
+						<dt><a href=""><img src="img/${pro[1].src}"/></a></dt>
+						<dd><a href="">${pro[1].content}</a></dd>
+						<dd><span>${pro[1].price}</span><em>${pro[1].price1}</em></dd>
+					</dl>
+					<dl>
+						<dt><a href=""><img src="img/${pro[2].src}"/></a></dt>
+						<dd><a href="">${pro[2].content}</a></dd>
+						<dd><span>${pro[2].price}</span><em>${pro[2].price1}</em></dd>
+					</dl>
+					<dl>
+						<dt><a href=""><img src="img/${pro[3].src}"/></a></dt>
+						<dd><a href="">${pro[3].content}</a></dd>
+						<dd><span>${pro[3].price}</span><em>${pro[3].price1}</em></dd>
+					</dl>
+					<dl>
+						<dt><a href=""><img src="img/${pro[4].src}"/></a></dt>
+						<dd><a href="">${pro[4].content}</a></dd>
+						<dd><span>${pro[4].price}</span><em>${pro[4].price1}</em></dd>
+					</dl>
+			
+				`)
+			}
+			
+		}
+	})
+})
+	

@@ -464,8 +464,8 @@ nav .navlist .navlist2-1 span a:hover {
   width: 220px;
 }
 #timegoods .timegoods-content .timegoods-contentL .timegoods-list dl dt:hover a img {
-  transition: all 0.3s linear;
-  transform: translateX(-10px);
+  transition: transform 0.2s linear;
+  transform: translateX(-5px);
 }
 #timegoods .timegoods-content .timegoods-contentL .timegoods-list dl:nth-of-type(1) {
   margin-left: 20px;
@@ -635,6 +635,238 @@ nav .navlist .navlist2-1 span a:hover {
 #timegoods .timegoods-content .timegoods-contentR dl dd:nth-of-type(4) p {
   font-size: 24px;
   color: #fff;
+}
+
+#option {
+  width: 100%;
+  height: 367px;
+  margin: 20px 0 35px 0;
+}
+#option .option-content {
+  width: 1185px;
+  height: 367px;
+  margin: 0 auto;
+}
+#option .option-content .option-Top {
+  height: 50px;
+  margin-left: 5px;
+  width: 1180px;
+  background: #fafafa;
+}
+#option .option-content .option-Top ul {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+#option .option-content .option-Top ul li {
+  box-sizing: border-box;
+  width: 196px;
+  height: 50px;
+  text-align: center;
+  color: #000;
+  font-size: 17px;
+  background: #fafafa;
+  line-height: 50px;
+}
+#option .option-content .option-Top ul li:nth-of-type(1) {
+  background: #fff url(../img/option-Top.jpg) repeat-x;
+  color: #ff5722;
+}
+#option .option-content .option-Top ul li:last-of-type {
+  width: 200px;
+}
+#option .option-content .option-Bt {
+  height: 317px;
+  width: 1180px;
+  margin-left: 5px;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+#option .option-content .option-Bt dl:nth-of-type(1) {
+  margin-left: 10px;
+}
+#option .option-content .option-Bt dl {
+  width: 220px;
+  padding-top: 20px;
+}
+#option .option-content .option-Bt dl dt {
+  display: flex;
+  justify-content: center;
+}
+#option .option-content .option-Bt dl dt a img {
+  width: 220px;
+  height: 220px;
+}
+#option .option-content .option-Bt dl dd:nth-of-type(1) a {
+  color: #333333;
+  font-size: 14px;
+  line-height: 24px;
+}
+#option .option-content .option-Bt dl dd:nth-of-type(1) a:hover {
+  color: #ff5722;
+}
+#option .option-content .option-Bt dl dd:nth-of-type(2) span {
+  padding-left: 55px;
+  color: #fe5722;
+  font-size: 14px;
+}
+#option .option-content .option-Bt dl dd:nth-of-type(2) em {
+  padding-left: 10px;
+  color: #999999;
+  font-size: 10px;
+  text-decoration: line-through;
+}
+
+#main1 {
+  width: 100%;
+  height: 642px;
+}
+#main1 .main1-content {
+  width: 1185px;
+  height: 642px;
+  margin: 0 auto;
+}
+#main1 .main1-content > h3 {
+  margin-left: 5px;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 40px;
+  font-size: 18px;
+  color: #333333;
+  background: url(../img/floor-T.jpg) no-repeat left center;
+}
+#main1 .main1-content .main1-1 {
+  width: 1180px;
+  height: 607px;
+  margin-left: 5px;
+  background: tan;
+}
+#main1 .main1-content .main1-1 .main1-L {
+  width: 220px;
+  float: left;
+  height: 607px;
+}
+#main1 .main1-content .main1-1 .main1-L .main-1-L-T {
+  width: 220px;
+  height: 292px;
+  background: #f99aae;
+}
+#main1 .main1-content .main1-1 .main1-L .main-1-L-T ul {
+  padding-top: 50px;
+  display: flex;
+  flex-flow: wrap;
+  padding-left: 10px;
+}
+#main1 .main1-content .main1-1 .main1-L .main-1-L-T ul li {
+  margin: 0 4px 28px 4px;
+}
+#main1 .main1-content .main1-1 .main1-L .main-1-L-T ul li a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  line-height: 60px;
+  text-align: center;
+}
+#main1 .main1-content .main1-1 .main1-L .main-1-L-T ul li a:hover {
+  border-radius: 0;
+  color: #f99aae;
+}
+#main1 .main1-content .main1-1 .main1-L .main-1-L-B {
+  margin-top: 25px;
+  width: 220px;
+  height: 290px;
+  background: #f99aae url(../img/main-1-bg.jpg) no-repeat 15px 140px;
+}
+#main1 .main1-content .main1-1 .main1-L .main-1-L-B > h4 {
+  padding: 36px 0 5px 10px;
+  font-size: 24px;
+  color: #fff;
+}
+#main1 .main1-content .main1-1 .main1-L .main-1-L-B > h5 {
+  padding-left: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+#main1 .main1-content .main1-1 .main1-L .main-1-L-B > span a {
+  margin: 8px 0 0 14px;
+  display: block;
+  width: 44px;
+  height: 20px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+}
+#main1 .main1-content .main1-1 .main1-L .main-1-L-B > span a em {
+  font-size: 14px;
+}
+#main1 .main1-content .main1-1 .main-M {
+  width: 700px;
+  height: 607px;
+  float: left;
+  margin-left: 20px;
+}
+#main1 .main1-content .main1-1 .main-M ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+#main1 .main1-content .main1-1 .main-M ul li {
+  width: 220px;
+  height: 290px;
+  background: #fff;
+}
+#main1 .main1-content .main1-1 .main-M ul li a {
+  text-align: center;
+}
+#main1 .main1-content .main1-1 .main-M ul li a div {
+  width: 220px;
+  height: 214px;
+  text-align: center;
+}
+#main1 .main1-content .main1-1 .main-M ul li a div > span {
+  display: inline-block;
+  height: 214px;
+  width: 0px;
+  vertical-align: middle;
+}
+#main1 .main1-content .main1-1 .main-M ul li a div img {
+  display: inline-block;
+  height: 180px;
+  width: 180px;
+  vertical-align: middle;
+}
+#main1 .main1-content .main1-1 .main-M ul li a p {
+  width: 180px;
+  margin-left: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #333;
+}
+#main1 .main1-content .main1-1 .main-M ul li a p:hover {
+  color: #ff5722;
+}
+#main1 .main1-content .main1-1 .main-M ul li:nth-of-type(4) {
+  margin-top: 27px;
+}
+#main1 .main1-content .main1-1 .main-M ul li:nth-of-type(5) {
+  margin-top: 27px;
+}
+#main1 .main1-content .main1-1 .main-M ul li:nth-of-type(6) {
+  margin-top: 27px;
+}
+#main1 .main1-content .main1-1 .main-R {
+  width: 220px;
+  height: 607px;
+  float: right;
 }
 
 /*# sourceMappingURL=index.css.map */
