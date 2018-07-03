@@ -1,0 +1,246 @@
+html{
+    background: #cccccc;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    box-shadow: 0px 1px 15px #adafb0;
+    .head-content{
+        width: 980px;
+        height: 100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >a{
+            img{
+                margin-left: 10px;
+            }
+        }
+        p{
+            padding-top: 40px;
+            font-size: 14px;
+            color: #000;
+            a{
+                display: inline-block;
+                width: 49px;
+                height: 22px;
+                background: #e73736;
+                color: #fff;
+                line-height: 22px;
+                font-size: 14px;
+                text-align: center;
+                margin-left: 5px;
+                &:hover{
+                    color:#000;
+                }
+            }
+        }
+    }
+}
+section{
+         width: 980px;
+         height: 465px;
+         margin:50px auto 0;
+         background: #fff;
+         box-shadow: 1px 1px 15px #adafb0;
+         border-radius: 10px;
+         position: relative;
+         .login-head{
+             width: 980px;
+             height: 55px;
+             display: flex;
+             p:nth-of-type(1){
+                 border-bottom: 1px solid #eee;
+                 display: inline-block;
+                 text-align: center;
+                 line-height: 55px;
+                 color: #e73736;
+                 width: 489px;
+                 border-right: 1px dashed #eee;
+                 font-size: 18px;
+                 border-bottom:1px solid #e73736 ;
+                 span{
+                    font-size: 24px!important;
+                    vertical-align: -2px;
+                    padding-right: 3px;
+                 }
+             }
+             p:nth-of-type(2){
+                 width: 490px;
+                 border-bottom: 1px solid #eee;
+                 display: inline-block;
+                 text-align: center;
+                 line-height: 55px;
+                 color: #8a8a8a;
+                 font-size: 18px;
+                 span{
+                    font-size: 22px!important;
+                     vertical-align: -2px;
+                      padding-right: 3px;
+                 }
+             }
+         }
+         .userputong{
+             font-size: 14px;
+             color:#e73736;
+             position: absolute;
+             top: 105px;
+             left: 710px;
+             display: block;
+         }
+         .usercard{
+             font-size: 14px;
+             color:#e73736;
+             position: absolute;
+              top: 105px;
+             left: 710px;
+             display: none;
+         }
+         .login-content{
+           width: 980px;
+           margin-top: 40px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           #t1,#t2{
+               width: 343px;
+               height: 40px;
+               border: 1px solid #cccccc;
+               color: #333;
+               font-size: 14px;
+               line-height: 40px;
+               padding-left: 15px;
+               padding-right: 40px;
+           }
+           .t1-error{
+               width:398px;
+               height: 24px;
+           }
+           .t2-error{
+               width:398px;
+               height: 24px;
+           }
+           .d1,.d2{
+               position: relative;
+           }
+           .s1,.s2{
+               color:#ccc;
+               position: absolute;
+               top: 10px;
+               left:15px ;
+           }
+           .s11,.s12{
+             width: 40px;
+             height: 40px;
+             display:inline-block;
+             background: url(../img/error.png) no-repeat center center;
+             top:1px;
+             right:0;
+             position: absolute;
+             display: none;
+         }
+         .t1-error,.t2-error,.t3-error,.t4-error{
+             height: 24px;
+             font-size: 12px;
+             color: #fe564b;
+             line-height: 24px;
+         }
+           .box1{
+               width: 398px;
+               label{
+                   span{
+                      font-size: 12px;
+                      color:#333;
+                   }
+               }
+               a{
+                   color: #e7497b;
+                   margin-left: 180px;
+               }
+               #cx{
+                    margin-right: 5px;
+                     height: 12px;
+                     width: 12px;
+                    vertical-align: middle;
+               }
+           }
+           #btn{
+             width: 398px;
+             height: 45px;
+             border: 1px solid #ff4948;
+             background: #e73736;
+             border-radius: 2px;
+             color: #fff;
+             font-size: 18px;
+             margin: 25px auto 0;
+             &:hover{
+                 background: #ff4948;
+             }
+          }
+         }
+         .login-content2{
+             width: 980px;
+             height: 408px;
+             position: absolute;
+             top: 57px;
+             left: 0;
+             background: #fff;
+             border-radius: 0 0 10px 10px;
+             display: none;
+             text-align: center;
+             line-height: 408px;
+             font-size: 30px;
+             color: #333;
+         }
+     }
+ .disanfang{
+     width: 398px;
+     margin-top: 40px;
+     font-size: 14px;
+     color: #333;
+ }
+ .other{
+     width: 398px;
+     margin-top: 18px;
+     a{
+                 font-size: 24px!important;
+                 text-align: center;
+                 line-height: 30px;
+                 display: inline-block;
+                 width: 30px;
+                 height: 30px;
+                 border-radius:5px;
+             }
+ }    
+.qq{
+        background: #28a8e4;
+         color: #fff;
+          &:hover{
+            background: rgba(40,168,228,0.6);
+                 }
+             }
+             .weibo{
+                 background: #fb5056;
+                 color: #fff;
+                 margin: 0 7px 0 14px;
+                 &:hover{
+                     background: rgba(251,80,86,0.6);
+                 }
+             }
+             .alipy{
+                 background: #f3a426;
+                 color: #fff;
+                 margin: 0 14px 0 7px;
+                 &:hover{
+                     background: rgba(243,164,38,0.6);
+                 }
+             }
+             .weixin{
+                 background: #00c100;
+                 color: #fff;
+                 &:hover{
+                     background: rgba(0,193,0,0.6);
+                 }
+             }

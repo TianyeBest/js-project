@@ -146,4 +146,128 @@ $(".option-Top ul li").mouseenter(function(){
 		}
 	})
 })
-	
+//showul
+var timeShow = setInterval(timeShow1,2000)
+var moveLeft = 0
+function timeShow1(){
+	moveLeft++
+	if( moveLeft == 13 ){
+		moveLeft = 1
+		$(".showul").css("left",0)
+	}
+	$(".showul").animate({"left":-moveLeft*180},1000)
+}
+$(".showul li").mouseenter(function(){
+	clearInterval(timeShow)
+}).mouseleave(function(){
+	timeShow = setInterval(timeShow1,1500)
+})
+/*var oUlleft = 0
+$(".next").click(function(){
+	oUlleft += 180
+	if( oUlleft >= 0 ){
+		oUlleft = 0
+	}
+	$(".showul").animate({"left":oUlleft},500)
+})
+$(".prev").click(function(){
+	oUlleft -= 180
+	if(oUlleft <= -2160){
+		oUlleft = -2160
+	}
+	console.log(oUlleft)
+	$(".showul").animate({"left":oUlleft},500)
+})*/
+/*box*/
+$(".box1").mouseenter(function(){
+	$(this).css("background","#fc5416 url(img/icon_03.png) no-repeat center center")
+	$(".box5").css({"display":"block","background":"#fc5416"})
+	$(".box5").stop().animate({"right":28},1000)
+}).mouseleave(function(){
+	$(".box1").css("background","#000000 url(img/icon_03.png) no-repeat center center")
+	$(".box5").css("background","#000")
+	$(".box5").stop().animate({"right":-30},1000,function(){
+    	$(".box5").hide()
+    })
+})
+$(".box5").mouseenter(function(){
+	$(".box5").show().css({"background":"#fc5416"});
+	$(".box1").css("background","#fc5416 url(img/icon_03.png) no-repeat center center")
+	$(".box5").stop();
+}).mouseleave(function(){
+	$(".box1").css("background","#000000 url(img/icon_03.png) no-repeat center center")
+	$(".box5").css("background","#000")
+    $(".box5").stop().animate({"right":-30},1000,function(){
+    	$(".box5").hide()
+    })
+})
+/*box2*/
+$(".box2").mouseenter(function(){
+	$(this).css("background","#fc5416 url(img/icon_06.png) no-repeat center center")
+	$(".box6").css({"display":"block","background":"#fc5416"})
+	$(".box6").stop().animate({"right":28},1000)
+}).mouseleave(function(){
+	$(".box2").css("background","#000000 url(img/icon_06.png) no-repeat center center")
+	$(".box6").css("background","#000")
+	$(".box6").stop().animate({"right":-30},1000,function(){
+    	$(".box6").hide()
+    })
+})
+$(".box6").mouseenter(function(){
+	$(".box6").show().css({"background":"#fc5416"});
+	$(".box2").css("background","#fc5416 url(img/icon_06.png) no-repeat center center")
+	$(".box6").stop();
+}).mouseleave(function(){
+	$(".box2").css("background","#000000 url(img/icon_06.png) no-repeat center center")
+	$(".box6").css("background","#000")
+    $(".box6").stop().animate({"right":-30},1000,function(){
+    	$(".box6").hide()
+    })
+})
+/*box3*/
+$(".box3").mouseenter(function(){
+	$(this).css("background","#fc5416 url(img/icon_08.png) no-repeat center center")
+	$(".box7").css({"display":"block","background":"#fc5416"})
+	$(".box7").stop().animate({"right":28},1000)
+}).mouseleave(function(){
+	$(".box3").css("background","#000000 url(img/icon_08.png) no-repeat center center")
+	$(".box7").css("background","#000")
+	$(".box7").stop().animate({"right":-28},1000,function(){
+    	$(".box7").hide()
+    })
+})
+$(".box7").mouseenter(function(){
+	$(".box7").show().css({"background":"#fc5416"});
+	$(".box3").css("background","#fc5416 url(img/icon_08.png) no-repeat center center")
+	$(".box7").stop();
+}).mouseleave(function(){
+	$(".box3").css("background","#000000 url(img/icon_08.png) no-repeat center center")
+	$(".box7").css("background","#000")
+    $(".box7").stop().animate({"right":-28},1000,function(){
+    	$(".box7").hide()
+    })
+})
+/*box4*/
+$(".box4").mouseenter(function(){
+	$(this).css("background","#fc5416 url(img/jiantou.png) no-repeat center center")
+	$(".box8").css({"display":"block","background":"#fc5416"})
+}).mouseleave(function(){
+	$(".box4").css("background","#000000 url(img/jiantou.png) no-repeat center center")
+	$(".box8").css("background","#000")
+	$(".box8").hide()
+})
+$(".box8").mouseenter(function(){
+	$(".box8").show().css({"background":"#fc5416"});
+	$(".box4").css("background","#fc5416 url(img/jiantou.png) no-repeat center center")
+	$(".box8").show();
+}).mouseleave(function(){
+	$(".box4").css("background","#000000 url(img/jiantou.png) no-repeat center center")
+	$(".box8").css("background","#000")
+    $(".box8").hide()
+})
+$(".box4").click(function(){
+	$("html,body").stop().animate({"scrollTop":0},1000)
+})
+$(".box8").click(function(){
+	$("html,body").stop().animate({"scrollTop":0},1000)
+})

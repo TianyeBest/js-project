@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="font/font_1x8osvziuw8/font-login.css"/>
+		<link rel="stylesheet" type="text/css" href="font/font.css"/>
+		<script src="js/jquery-1.11.1.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="head-content">
+				<a href="index.html"><img src="img/logo.gif"/></a>
+				<p>如未注册，点此<a href="register.html">注册</a></p>
+			</div>
+		</header>
+		<section>
+			<div class="login-head">
+				<p><span class="iconfont">&#xe607;</span>会员登陆</p>
+				<p><span class="iconfont">&#xe6d5;</span>手机动态密码登陆</p>
+			</div>
+			<div class="usercard">进入会员卡登陆</div>
+			<div class="userputong">进入普通会员登陆</div>
+			<div class="login-content">
+				<ul>
+					<li class="d1">
+						<input type="text" value="" id="t1" />
+						<p class="t1-error"></p>
+						<label for="t1"><span class="s1">用户名</span></label>
+						<span class="s11"></span>
+					</li>
+					<li class="d2">
+						<input type="password" value="" id="t2" />
+						<p class="t2-error"></p>
+						<label for="t2"><span class="s2">密码</span></label>
+						<span class="s12"></span>
+					</li>
+					<li class="box1">
+						<label>
+							<input type="checkbox" name="cx" id="cx"/><span>请保存我这次的登陆信息</span>
+						</label>
+						<a href="">忘记密码？</a>
+					</li>
+					<li>
+						<input type="button" id="btn1" value="登陆" />
+					</li>
+				</ul>
+				
+				<p class="disanfang">使用第三方帐号登陆</p>
+				<div class="other">
+					<a class="qq iconfont" href="">&#xe646;</a>
+					<a class="weibo iconfont" href="">&#xe651;</a>
+					<a class="alipy iconfont" href="">&#xe62c;</a>
+					<a class="weixin iconfont" href="">&#xe608;</a>
+				</div>
+			</div>
+			<div class="login-content2">
+				功能尚未开放，请选择用用户名和密码登录！
+			</div>
+		</section>
+	</body>
+</html>
+<script src="js/login.js"></script>
