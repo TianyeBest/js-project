@@ -1,0 +1,78 @@
+{
+	
+		"list1" :[
+		{
+			"src" : "ajax1.jpg",
+			"price" : "￥1488.00",
+			"content":"爱他美奶粉 Aptamil pre段 800g 8罐",
+			"guojia":"guojia1.png"
+		},
+		{
+			"src" : "ajax2.jpg",
+			"price" : "￥1030.00",
+			"content":"Hipp 德国喜宝益生菌奶粉 Pre段",
+			"guojia":"guojia2.png"
+		},
+		{
+			"src" : "ajax3.jpg",
+			"price" : "￥2040.00",
+			"content":"测试0.1",
+			"guojia":"guojia1.png"
+		},
+		{
+			"src" : "ajax4.jpg",
+			"price" : "￥3050.00",
+			"content":"尤妮佳（Moony）纸尿裤女宝拉拉裤",
+			"guojia":"guojia2.png"
+		},
+		{
+			"src" : "ajax5.jpg",
+			"price" : "￥4999.00",
+			"content":"爱他美奶粉 Aptamil pre段 800g 8罐",
+			"guojia":"guojia1.png"
+		},
+		{
+			"src" : "ajax6.jpg",
+			"price" : "￥4999.00",
+			"content":"爱他美奶粉 Aptamil pre段 800g 8罐",
+			"guojia":"guojia2.png"
+		},
+		{
+			"src" : "ajax7.jpg",
+			"price" : "￥49991.00",
+			"content":"爱他美奶粉 Aptamil pre段 800g 8罐",
+			"guojia":"guojia1.png"
+		},
+		{
+			"src" : "ajax8.jpg",
+			"price" : "￥49992.00",
+			"content":"爱他美奶粉 Aptamil pre段 800g 8罐",
+			"guojia":"guojia2.png"
+		},
+		{
+			"src" : "ajax9.jpg",
+			"price" : "￥49993.00",
+			"content":"爱他美奶粉 Aptamil pre段 800g 8罐",
+			"guojia":"guojia2.png"
+		},
+		{
+			"src" : "ajax10.jpg",
+			"price" : "￥49994.00",
+			"content":"爱他美奶粉 Aptamil pre段 800g 8罐",
+			"guojia":"guojia2.png"
+		},
+		{
+			"src" : "ajax1.jpg",
+			"price" : "￥14999.00",
+			"content":"爱他美奶粉 Aptamil pre段 800g 8罐",
+			"guojia":"guojia1.png"
+		},
+		{
+			"src" : "ajax2.jpg",
+			"price" : "￥24999.00",
+			"content":"爱他美奶粉 Aptamil pre段 800g 8罐",
+			"guojia":"guojia2.png"
+		}
+		]
+	
+}

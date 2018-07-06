@@ -40,84 +40,6 @@ $(".nav-4").mouseenter(function(){
 	$(".nav-4").hide()
 	$(".nav-3").hide()
 })
-/*放大镜*/
-$(".bottom-img ul li").click(function(){
-	$index = $(this).index()
-	$(this).addClass("active1").siblings().removeClass("active1")
-	$(".small-img img").eq($index).show().siblings("img").hide();
-	$(".big-img img").eq($index).show().siblings().hide();
-	$(".mask").css("background","url(img/good"+($index+1)+".jpg)")
-})
-$(".small-img").mouseenter(function(){
-	$(".mask").show()
-	$(".layer").show()
-	$(".big-img").show()
-}).mouseleave(function(){
-	$(".mask").hide()
-	$(".layer").hide()
-	$(".big-img").hide()
-}).mousemove(function(e){
-	var e = e || event;
-	var x = e.pageX - $(".mask").width()/2 - $(".small-img").offset().left
-	var y = e.pageY - $(".mask").height()/2 - $(".small-img").offset().top
-	var maxL = $(".small-img").width() - $(".mask").width()
-	var maxY = $(".small-img").height() - $(".mask").height()
-	x = x < 0 ? 0 : (x>maxL?maxL:x)
-	y = y < 0 ? 0 : (y>maxY?maxY:y)
-	$(".mask").css({
-		"left":x,
-		"top":y,
-		"backgroundPositionX":-x,
-		"backgroundPositionY":-y,
-	})
-	var bigL = x*$(".big-img").width()/$(".small-img").width()
-	var bigY = y*$(".big-img").height()/$(".small-img").height()
-	$(".big-img img").css({
-		"left":-bigL,
-	    "top":-bigY
-	})
-})
-//cont-m-M
-$(".cont-m-M-p2-s1").mouseenter(function(){
-	$(".huiyuanbuy").show()
-}).mouseleave(function(){
-	$(".huiyuanbuy").hide()
-})
-$(".iponepay").mouseenter(function(){
-	$(".erweima").show()
-}).mouseleave(function(){
-	$(".erweima").hide()
-})
-var count = 1
-$(".cont-m-M-p6 span").eq(1).click(function(){
-	--count
-	if( count <= 0 ){
-		alert("你必须选择一件商品进行购买")
-		count = 1
-	}
-	$(this).next("span").html(count)
-	$(".money").html(`￥${count*90}.0`)
-})
-$(".cont-m-M-p6 span").eq(3).click(function(){
-	count++
-	$(this).prev("span").html(count)
-	$(".money").html(`￥${count*90}.0`)
-})
-//商品详情 评价详情显示隐藏
-$(".cont-b-L-T>ul>li").eq(1).click(function(){
-	var index = $(this).index()
-	$(this).addClass("active3")
-	$(".cont-b-L-T>ul>li").eq(0).removeClass("active3")
-	$(".cont1").eq(1).show()
-	$(".cont1").eq(0).hide()
-})
-$(".cont-b-L-T>ul>li").eq(0).click(function(){
-	var index = $(this).index()
-	$(this).addClass("active3")
-	$(".cont-b-L-T>ul>li").eq(1).removeClass("active3")
-	$(".cont1").eq(0).show()
-	$(".cont1").eq(1).hide()
-})
 //right-nav-L
 $(".list1").mouseenter(function(){
 	$(this).css("background","#e73736 url(img/icon_03.png) no-repeat center center")
@@ -220,3 +142,81 @@ $(".list2").mouseenter(function(){
 		$(".list2 span").css({"background":"#e73736","color": "#fff"})
 	}
 })
+
+//ajax
+$.ajax({
+	type : "get",
+	url : "js/minute.json",
+	dataType : "json",
+	success : function(res){
+		var str = ""
+		for( var i = 0 ; i < res.list1.length; i++ ){
+			str += `<li>
+						<a class="action1" href="">
+							<img src="img/${res.list1[i].src}" alt="" />
+							<div class="action1-1">
+								<span>${res.list1[i].price}</span>
+								<i><em>0</em>人付款</i>
+							</div>
+							<p>${res.list1[i].content}</p>
+						</a>
+						<div class="action2">
+							<div class="action2-1">1</div>
+							<div class="action2-2">
+								<a class="jia" href="javascript:;">+</a>
+								<a class="jian" href="javascript:;">-</a>
+							</div>
+							<span class="action2-3">加入购物车</span>
+							<img src="img/${res.list1[i].guojia}"/>
+						</div>
+					</li>`
+		}
+		$(".minute-UL").html(str)
+		var arr = [];
+		for( let j = 0 ; j < $(".jia").length ;j++){
+			arr.push(new oCount().count)//[1,1,1,1,1,1,1,1]
+			$(".jia").eq(j).click(function(){
+				arr[j]++
+				$(this).parent().prev().html(arr[j])
+			})
+			$(".jian").eq(j).click(function(){
+				arr[j]--
+				if( arr[j] <= 1 ){
+					arr[j] = 1
+				}
+				$(this).parent().prev().html(arr[j])
+			})
+		}
+		/*for( let j = 0 ; j < $(".jia").length ;j++){
+			var count = 1
+			$(".jia").eq(j).click(function(){
+				count++
+				$(this).parent().prev().html(count)
+				
+			})
+		}*/
+		
+		/*var count = 0
+		$(".jia").each(function(){
+			this.count = count;
+			count++;
+			$(this).click(function(){
+				$(".jia").parent().prev().html(this.count)
+			})
+		})*/
+	}
+})
+function oCount(){
+	this.count = 1
+}
+/*function oCount(){
+	if( !oCount.ins ){
+		oCount.ins = {
+			count : 1,
+			jia : function(){
+				this.count++
+			}
+		}
+	}
+	return oCount.ins
+}*/
